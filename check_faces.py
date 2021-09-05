@@ -10,6 +10,7 @@ face_files = np.array(glob("data/test/*"))
 face_cascade = cv2.CascadeClassifier('cv2/haarcascade_frontalface_alt.xml')
 
 for i in range(len(face_files)):
+    print('len of face_files',i)
     face_count = face_detector(face_files[i], face_cascade)
     if face_count is ():
             print("No faces found")
@@ -24,7 +25,7 @@ for i in range(len(face_files)):
             #show image
             cv2.namedWindow('image', cv2.WINDOW_AUTOSIZE)
             cv2.imshow('image', img)
-            cv2.waitKey()
+            cv2.waitKey(300)
 
 
 
